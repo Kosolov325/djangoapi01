@@ -1,0 +1,20 @@
+{% extends 'catalog/static/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock css %}  
+
+{% block main %}
+<div>
+    <a href="{% url 'catalog' %}">Voltar</a> 
+</div>
+<h1>Editar carro</h1>
+<div class="input">
+    <form class="form"  enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        <button type="submit">salvar</button>
+    </form>
+</div>
+{% endblock main %}

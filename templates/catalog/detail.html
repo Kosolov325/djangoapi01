@@ -1,0 +1,29 @@
+{% extends 'catalog/static/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock css %}
+
+
+{% block main %}
+    <div class="container">
+      <div class="container-header">
+        <nav class="stats">
+          <a href="{% url 'delete' selectedCar.id %}">Deletar</a>
+          <a href="{% url 'update' selectedCar.id %}">Alterar</a>
+        </nav>
+        <h3>Serie: {{selectedCar.nome}} </h3>
+        <p>Ano: {{selectedCar.ano}} </p>
+        <p>Marca: {{selectedCar.marca}} </p>
+     </div>
+      <img src="https://cdn.motor1.com/images/mgl/2gwok/s3/mercedes-benz-e-300-exclusive.jpg" alt="">
+      <div class="description">
+         <h3>Descrição:</h3>
+         <p>{{selectedCar.desc}}</p>
+      </div>
+     </div>
+   
+{% endblock main %}
+
+

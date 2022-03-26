@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}Detalhe{% endblock titulo %}
+
+{% block body %}
+<div>
+    <a href="{% url 'principal' %}">Voltar</a>
+    <a href="{% url 'alterar' searchedPost.id %}">Alterar</a>
+    <a href="{% url 'delete' searchedPost.id %}">Delete</a>
+</div>
+<h2>{{searchedPost.titulo}}</h2>
+<p>{{searchedPost.texto}}</p>
+{% endblock body %}

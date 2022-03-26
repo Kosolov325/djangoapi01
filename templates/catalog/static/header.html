@@ -1,0 +1,12 @@
+<header class="header">
+    <nav class="menu">
+     <div class="navi">
+       <a href="{% url 'index' %}"><p>Home</p></a>
+       <a href="{% url 'catalog' %}"><P>Catalogo</P></a>
+       {% comment %} <a href="{% url 'index' %}"><p>Fornecedores</p></a> {% endcomment %}
+    </div>
+    <div class="sign">
+       <a href="{% url 'admin' %}" class="sign"><p>Login</p></a>
+       <a href="{% url 'admin' %}" class="sign"><p>Registro</p></a>
+    </div>
+</header>

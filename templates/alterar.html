@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}alterar{% endblock titulo %}
+
+{% block body %}
+<div>
+    <a href="{% url 'principal' %}">Voltar</a> 
+</div>
+<div>
+    <h1>Editar post</h1>
+    <form enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{formulario.as_table}}
+        <button type="submit">salvar</button>
+    </form>
+</div>
+{% endblock body %}
+

@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.container-header{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 44%;
+}
+
+.stats{
+    display: flex;
+    padding-bottom: 2px;
+}
+
+.container img{
+    width: 600px;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+.description{
+    width: 45%;
+    font-size: 1.1rem;
+}
+
+.description p{
+    font-size: 1rem;
+}

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 50, 53);
+}
+
+body, html{
+    height: 100%;
+    
+}

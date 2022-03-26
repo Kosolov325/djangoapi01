@@ -1,0 +1,39 @@
+.header {
+    height: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(28, 78, 82) 0%, rgb(59, 163, 168) 35%, rgb(45, 97, 97) 100%);
+}
+
+.header p, a:visited {
+    font-size: medium;
+    text-align: center;
+    padding: 3px 5px;
+    color: rgb(228, 222, 222);
+}
+
+.header p:hover {
+    color: rgb(255, 255, 255);
+}
+
+.menu {
+    width: 100%;
+    display: inline-flex;
+    padding: 5px;
+    justify-content: space-around;
+    font-weight: 400;
+}
+
+.navi a{
+    display: inline-flex;
+    padding-right: 7rem;
+    justify-content: left;
+
+}
+.sign a{
+    display: inline-flex;
+    justify-content: right;
+    padding-right: 1rem;
+
+}

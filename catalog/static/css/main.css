@@ -1,0 +1,11 @@
+.main {
+    /* overflow: auto; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: flex-start;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
