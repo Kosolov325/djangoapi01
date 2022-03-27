@@ -4,11 +4,14 @@
 
 Esse projeto utiliza bibliotecas externas:
 - Pillow
+- Django
+
 ## Installation
 ``` python
 cd /venv/Scripts
 .activate # ou .\activate caso esteja utilizando o powershell
 cd ../..
+pip install django
 pip install pillow
 ```
 ## Features
