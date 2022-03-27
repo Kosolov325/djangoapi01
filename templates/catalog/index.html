@@ -2,11 +2,25 @@
 {% load static %}
 
 {% block css %}
-
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock css %}
 
 {% block main %}
 
+   
+    
+    
+    <a href="{% url 'detail' randomCar.id %}">
+        <h1>Achamos um carro para você</h1>
+    <div class="card">
+      <img src="/{{randomCar.photo}}">
+      <div class="content">
+        <p>Ano: {{randomCar.ano}} </p>
+        <p>Marca: {{randomCar.marca}} </p>
+      </div>
+      <h3>Serie: {{randomCar.nome}} </h3>
+    </div>
+    </a>
 
 {% endblock main %}
 

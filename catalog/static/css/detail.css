@@ -10,13 +10,24 @@
 .container-header{
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
     width: 44%;
 }
 
+.a > a{
+    padding: 6px;
+    border-radius: 8px;
+    width: 50px;
+    font-size: 12px;
+    background-color: rgb(59, 163, 168);
+}
+.a > a:hover{
+    filter: opacity(80%);
+    transition: filter 0.2s;
+}
 .stats{
     display: flex;
-    padding-bottom: 2px;
+    flex-direction: column;
 }
 
 .container img{

@@ -8,6 +8,7 @@
     width: 330px;
     height: 300px;
     margin-bottom: 20px;
+    margin-top: 20px;
 
 }
 
@@ -33,5 +34,19 @@
 }
 
 .new{
-    padding-bottom: 2px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: solid 3px rgb(82, 236, 247);
+    padding: 4px;
+    color: rgb(82, 236, 247) !important;
+}
+
+.new:hover{
+    padding-bottom: 3px;
+    background-color: rgb(82, 236, 247);
+    color: rgb(0, 0, 0) !important;
+    border: none;
+    transition: background-color 0.2s;
+    transition: color 0.2s
 }

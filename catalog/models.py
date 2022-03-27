@@ -29,5 +29,6 @@ class Car(models.Model):
     marca = marcasField()
     ano = yearsField()
     desc = models.TextField(('Descrição'))
+    photo = models.ImageField(('Foto'),upload_to='static/assets', default='assets/carro.jpg')
     def __str__(self) -> str:
         return self.nome

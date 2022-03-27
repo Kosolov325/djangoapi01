@@ -7,11 +7,11 @@
 
 {% block main %}
 <div>
-    <a href="{% url 'catalog' %}">Voltar</a> 
+    <a class="a" href="{% url 'catalog' %}">Voltar</a> 
 </div>
 <h1>Editar carro</h1>
 <div class="input">
-    <form class="form"  enctype="multipart/form-data" method="POST">
+    <form class="form"  accept-charset="utf-8" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         {{form.as_table}}
         <button type="submit">salvar</button>

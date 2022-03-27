@@ -9,15 +9,17 @@
 {% block main %}
     <div class="container">
       <div class="container-header">
-        <nav class="stats">
+        <div class="stats">
+          <h3>Serie: {{selectedCar.nome}} </h3>
+          <p>Ano: {{selectedCar.ano}} </p>
+          <p>Marca: {{selectedCar.marca}} </p>
+        </div>
+        <div class="a">
           <a href="{% url 'delete' selectedCar.id %}">Deletar</a>
           <a href="{% url 'update' selectedCar.id %}">Alterar</a>
-        </nav>
-        <h3>Serie: {{selectedCar.nome}} </h3>
-        <p>Ano: {{selectedCar.ano}} </p>
-        <p>Marca: {{selectedCar.marca}} </p>
+        </div>
      </div>
-      <img src="https://cdn.motor1.com/images/mgl/2gwok/s3/mercedes-benz-e-300-exclusive.jpg" alt="">
+      <img src="/{{selectedCar.photo}}">
       <div class="description">
          <h3>Descrição:</h3>
          <p>{{selectedCar.desc}}</p>

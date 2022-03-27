@@ -7,13 +7,13 @@
 
 
 {% block main %}
-    <div class="new">
-      <a href="{% url 'create' %}">Novo</a>
+    <div>
+      <a class="new" href="{% url 'create' %}">Novo</a>
     </div>
     {% for item in cars %}
       <a href="{% url 'detail' item.id %}">
       <div class="card">
-        <img src="https://cdn.motor1.com/images/mgl/2gwok/s3/mercedes-benz-e-300-exclusive.jpg" alt="">
+        <img src="/{{item.photo}}">
         <div class="content">
           <p>Ano: {{item.ano}} </p>
           <p>Marca: {{item.marca}} </p>

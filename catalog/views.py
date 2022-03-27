@@ -1,11 +1,17 @@
+from email.policy import default
+from logging import Logger
+import logging
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import admin
 from .forms import CreateCar
 from .models import Car
+import random
 
 # Create your views here.
 def viewIndex(request):
-    return render(request,"catalog/index.html")
+    cars = Car.objects.all()
+    car  = random.choice(cars)
+    return render(request,"catalog/index.html", {'randomCar':car})
 
 def viewAdmin(request):
     return redirect("admin")
@@ -32,7 +38,7 @@ def viewCar(request, id):
 #Update
 def viewUpdateCar(request, id):
     searchedCar = get_object_or_404(Car, pk=id)
-    form = CreateCar(request.POST or None, instance=searchedCar)
+    form = CreateCar(request.POST or None, request.FILES or None, instance=searchedCar)
     if form.is_valid():
         form.save()
         return redirect('detail', id=form.instance.id)

@@ -1,0 +1,49 @@
+a{
+    margin: 10px;
+}
+
+h1:hover{
+    border-radius: 4px;
+    background-color: #d3d2d2;
+    color: black;
+    filter: opacity(80%);
+    transition: filter 0.2s;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+    
+}
+
+.card{
+    cursor: pointer;
+    background-color: rgb(28, 78, 82);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 418px;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.card:hover{
+    transform: scale(1.07);
+    transition: transform 0.2s;
+}
+
+.card > img{
+    width: 380px;
+    height: 200px;
+}
+
+.card h3{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content {
+    width: 91%;
+    display: flex;
+    justify-content: space-between;
+}
