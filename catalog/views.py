@@ -18,7 +18,7 @@ def viewAdmin(request):
 
 #Create
 def viewCreateCar(request):
-    form = CreateCar(request.POST or None)
+    form = CreateCar(request.POST or None, request.FILES or None)
     if form.is_valid():
             form.save()
             return redirect('detail', id=form.instance.id)
