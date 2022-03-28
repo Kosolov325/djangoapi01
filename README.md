@@ -12,7 +12,7 @@ Esse projeto utiliza bibliotecas externas:
 ## Installation
 ``` python
 cd /venv/Scripts
-.activate # ou .\activate caso esteja utilizando o powershell
+activate # ou .\activate caso esteja utilizando o powershell
 cd ../..
 pip install django
 pip install pillow
