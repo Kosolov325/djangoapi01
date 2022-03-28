@@ -10,19 +10,17 @@
     <div class="container">
       <div class="container-header">
         <div class="stats">
-          <h3>Serie: {{selectedCar.nome}} </h3>
-          <p>Ano: {{selectedCar.ano}} </p>
-          <p>Marca: {{selectedCar.marca}} </p>
+          <h3>Nome: {{selectedMarca.nome}} </h3>
         </div>
         <div class="a">
-          <a href="{% url 'delete' selectedCar.id %}">Deletar</a>
-          <a href="{% url 'update' selectedCar.id %}">Alterar</a>
+          <a href="{% url 'deleteMarca' selectedMarca.id %}">Deletar</a>
+          <a href="{% url 'updateMarca' selectedMarca.id %}">Alterar</a>
         </div>
      </div>
-      <img src="/{{selectedCar.photo}}">
+      <img src="/{{selectedMarca.photo}}">
       <div class="description">
          <h3>Descrição:</h3>
-         <p>{{selectedCar.desc}}</p>
+         <p>{{selectedMarca.desc}}</p>
       </div>
      </div>
    

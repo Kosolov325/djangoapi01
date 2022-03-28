@@ -14,6 +14,10 @@
     width: 44%;
 }
 
+.a{
+    margin-bottom: 10px;
+}
+
 .a > a{
     padding: 6px;
     border-radius: 8px;
@@ -21,6 +25,7 @@
     font-size: 12px;
     background-color: rgb(59, 163, 168);
 }
+
 .a > a:hover{
     filter: opacity(80%);
     transition: filter 0.2s;

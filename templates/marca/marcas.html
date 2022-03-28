@@ -1,0 +1,24 @@
+{% extends 'static/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/marcas/marcas.css' %}">
+{% endblock css %}
+
+
+{% block main %}
+    <a class="new" href="{% url 'createMarca' %}">Novo</a>
+    {% for item in marcas %}
+      <a href="{% url 'detailMarca' item.id %}">
+      <div class="card">
+        <img src="/{{item.photo}}">
+        <div class="content">
+        </div>
+        <h3>Marca: {{item.nome}} </h3>
+      </div>
+    </a>
+    {% endfor %}
+      
+{% endblock main %}
+   
+

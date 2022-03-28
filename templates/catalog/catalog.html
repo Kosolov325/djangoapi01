@@ -1,15 +1,13 @@
-{% extends 'catalog/static/base.html' %}
+{% extends 'static/base.html' %}
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+<link rel="stylesheet" href="{% static 'css/catalog/catalog.css' %}">
 {% endblock css %}
 
 
 {% block main %}
-    <div>
-      <a class="new" href="{% url 'create' %}">Novo</a>
-    </div>
+    <a class="new" href="{% url 'create' %}">Novo</a>
     {% for item in cars %}
       <a href="{% url 'detail' item.id %}">
       <div class="card">
