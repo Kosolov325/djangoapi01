@@ -5,6 +5,7 @@ import datetime
 class Marca(models.Model):
     nome  = models.CharField(('Nome'),max_length=50, blank = False)
     photo = models.ImageField(('Logo'), default='' ,upload_to='static/assets')
+    desc  = models.TextField(('Descrição'), default='')
 
     def __str__(self):
         return self.nome
@@ -26,7 +27,7 @@ class Car(models.Model):
     nome = models.CharField(('Nome'),max_length=50, blank = False)
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
     ano = yearsField()
-    desc = models.TextField(('Descrição'))
+    desc = models.TextField(('Descrição'), default='')
     photo = models.ImageField(('Foto'),upload_to='static/assets', default='assets/carro.jpg')
     def __str__(self):
         return self.nome

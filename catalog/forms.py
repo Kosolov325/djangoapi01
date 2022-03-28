@@ -10,4 +10,4 @@ class CreateCar(ModelForm):
 class CreateMarca(ModelForm):
     class Meta:
         model = Marca
-        fields = ['nome', 'photo']
+        fields = ['nome', 'photo', 'desc']
