@@ -11,6 +11,7 @@ Esse projeto utiliza bibliotecas externas:
 
 ## Installation
 ``` python
+py -m venv venv  #Inicializa o ambiente virtual
 cd /venv/Scripts
 activate # ou .\activate caso esteja utilizando o powershell
 cd ../..
