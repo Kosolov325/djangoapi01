@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 import datetime
 
@@ -29,5 +30,6 @@ class Car(models.Model):
     ano = yearsField()
     desc = models.TextField(('Descrição'), default='')
     photo = models.ImageField(('Foto'),upload_to='static/assets', default='assets/carro.jpg')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default='')
     def __str__(self):
         return self.nome

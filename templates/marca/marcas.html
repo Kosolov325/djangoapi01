@@ -7,7 +7,10 @@
 
 
 {% block main %}
-    <a class="new" href="{% url 'createMarca' %}">Novo</a>
+    {% if user.is_authenticated %}
+      <a class="new" href="{% url 'createMarca' %}">Novo</a>
+    {% endif %}
+    
     {% for item in marcas %}
       <a href="{% url 'detailMarca' item.id %}">
       <div class="card">

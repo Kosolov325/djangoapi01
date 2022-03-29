@@ -20,3 +20,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("catalog.urls")),
 ] 
+handler404 = "catalog.views.handle_not_found"

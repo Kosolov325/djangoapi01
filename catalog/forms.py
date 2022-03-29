@@ -1,5 +1,13 @@
 from django.forms import ModelForm
 from .models import Car, Marca
+from django.contrib.auth.models import User
+
+
+class CreateUser(ModelForm):
+    class Meta:
+        model = User
+        help_texts = { 'username': None, }
+        fields = ['username', 'first_name', 'last_name', 'email', 'password']
 
 class CreateCar(ModelForm):
     class Meta:

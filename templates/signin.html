@@ -1,0 +1,21 @@
+{% extends 'static/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/user.css' %}">
+{% endblock css %}  
+
+{% block main %}
+<div>
+    <a class="a" href="{% url 'index' %}">Voltar</a>
+</div>
+<h1>Entrar</h1>
+<div class="input">
+    <form class="form" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        <button type="submit">Logar</button>
+        <a href="{% url 'signup' %}">Não tem uma conta?  Clique aqui</a>
+    </form>
+</div>
+{% endblock main %}

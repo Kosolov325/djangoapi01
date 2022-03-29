@@ -5,8 +5,14 @@
        <a href="{% url 'catalog' %}"><P>Catalogo</P></a>
        <a href="{% url 'marcas' %}"><p>Marcas</p></a>
     </div>
+    {% if user.is_authenticated %}
     <div class="sign">
-       <a href="{% url 'admin' %}" class="sign"><p>Login</p></a>
-       <a href="{% url 'admin' %}" class="sign"><p>Registro</p></a>
+      <a href="{% url 'logout' %}" class="sign"><p>Deslogar</p></a>
+   </div>
+    {% else %}
+    <div class="sign">
+       <a href="{% url 'signin' %}" class="sign"><p>Login</p></a>
+       <a href="{% url 'signup' %}" class="sign"><p>Registro</p></a>
     </div>
+    {% endif %}
 </header>

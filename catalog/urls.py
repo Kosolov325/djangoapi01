@@ -1,16 +1,20 @@
+from xml.etree.ElementInclude import include
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 from .views import *
 
 urlpatterns = [
     path("admin/", viewAdmin, name="admin"),
     path("", viewIndex, name="index"),
-
     #Create
       path('catalog/criar/', viewCreateCar, name='create' ),
 
       path('marcas/criar/', viewCreateMarca, name = 'createMarca'),
+
+      path('signup/', viewCreateUser, name = 'signup'),
+      path('signin/', viewLogin.as_view(redirect_authenticated_user=True), name='signin'),
+      path("logout/", viewLogout, name='logout'),
 
     #Read
       path("catalog/", viewCatalog, name='catalog'),
@@ -34,3 +38,4 @@ urlpatterns = [
 
    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

@@ -13,11 +13,14 @@
           <h3>Serie: {{selectedCar.nome}} </h3>
           <p>Ano: {{selectedCar.ano}} </p>
           <p>Marca: {{selectedCar.marca}} </p>
+          <p>Autor: {{selectedCar.author}}</p>
         </div>
+        {% if  user == selectedCar.author or user.is_superuser %}
         <div class="a">
           <a href="{% url 'delete' selectedCar.id %}">Deletar</a>
           <a href="{% url 'update' selectedCar.id %}">Alterar</a>
         </div>
+        {% endif %}
      </div>
       <img src="/{{selectedCar.photo}}">
       <div class="description">

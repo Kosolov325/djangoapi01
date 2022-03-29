@@ -12,10 +12,12 @@
         <div class="stats">
           <h3>Nome: {{selectedMarca.nome}} </h3>
         </div>
+        {% if user.is_superuser %}
         <div class="a">
           <a href="{% url 'deleteMarca' selectedMarca.id %}">Deletar</a>
           <a href="{% url 'updateMarca' selectedMarca.id %}">Alterar</a>
         </div>
+        {% endif %}
      </div>
       <img src="/{{selectedMarca.photo}}">
       <div class="description">
