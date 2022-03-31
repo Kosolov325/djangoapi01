@@ -8,6 +8,7 @@ class CreateUser(ModelForm):
         model = User
         help_texts = { 'username': None, }
         fields = ['username', 'first_name', 'last_name', 'email', 'password']
+    
 
 class CreateCar(ModelForm):
     class Meta:

@@ -51,12 +51,17 @@ def viewCreateMarca(request):
 
 def viewCreateUser(request):
     if not request.user.is_authenticated:
-        form = CreateUser(request.POST or None, request.FILES or None)
+        form = CreateUser(request.POST or None)
         if form.is_valid():
-            form.save()
-            return redirect('index')
-    
-        return render(request, 'signup.html', {"form":form})
+            try:
+                user = form.save(commit = False)
+                user.set_password(form.cleaned_data['password'])
+                user.save()
+                return redirect('index')
+            except:
+                pass
+        else:
+            return render(request, 'signup.html', {"form":form})
     else:
         return redirect('index')
 
@@ -68,6 +73,7 @@ class viewLogin(LoginView):
         passw = request.POST['password']
         user = authenticate(request, username=name, password=passw)
         if user is not None:
+            if user.is_active:
                 login(request, user)
                 return redirect ('index')
         else:
